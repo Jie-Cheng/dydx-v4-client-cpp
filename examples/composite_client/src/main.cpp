@@ -26,47 +26,47 @@ int main()
                      account_info,
                      dydx_v4_client_lib::PlaceLongTermOrderParams {
                          .symbol = "ETH-USD",
-                         .side = dydx_v4_client_lib::OrderSide::BUY,
+                         .side = dydx_v4_client_lib::OrderSide::SELL,
                          .order_cid = 2,
-                         .price = 2200,
+                         .price = 2500,
                          .size = 0.01,
                      }
                  )
               << std::endl;
 
-    std::cout << client.CancelOrder(
-                     exchange_info,
-                     account_info,
-                     dydx_v4_client_lib::CancelLongTermOrderParams {
-                         .symbol = "ETH-USD",
-                         .order_cid = 2,
-                         .conditional = false,
-                     }
-                 )
-              << std::endl;
+    // std::cout << client.CancelOrder(
+    //                  exchange_info,
+    //                  account_info,
+    //                  dydx_v4_client_lib::CancelLongTermOrderParams {
+    //                      .symbol = "ETH-USD",
+    //                      .order_cid = 2,
+    //                      .conditional = false,
+    //                  }
+    //              )
+    //           << std::endl;
 
-    std::cout << client.PlaceOrder(
-                     exchange_info,
-                     account_info,
-                     dydx_v4_client_lib::PlaceShortTermOrderParams {
-                         .symbol = "ETH-USD",
-                         .side = dydx_v4_client_lib::OrderSide::BUY,
-                         .order_cid = 3,
-                         .price = 2200,
-                         .size = 0.01,
-                     }
-                 )
-              << std::endl;
+    // std::cout << client.PlaceOrder(
+    //                  exchange_info,
+    //                  account_info,
+    //                  dydx_v4_client_lib::PlaceShortTermOrderParams {
+    //                      .symbol = "ETH-USD",
+    //                      .side = dydx_v4_client_lib::OrderSide::BUY,
+    //                      .order_cid = 3,
+    //                      .price = 2200,
+    //                      .size = 0.01,
+    //                  }
+    //              )
+    //           << std::endl;
 
-    std::cout << client.CancelOrder(
-                     exchange_info,
-                     account_info,
-                     dydx_v4_client_lib::CancelShortTermOrderParams {
-                         .symbol = "ETH-USD",
-                         .order_cid = 3,
-                     }
-                 )
-              << std::endl;
+    // std::cout << client.CancelOrder(
+    //                  exchange_info,
+    //                  account_info,
+    //                  dydx_v4_client_lib::CancelShortTermOrderParams {
+    //                      .symbol = "ETH-USD",
+    //                      .order_cid = 3,
+    //                  }
+    //              )
+    //           << std::endl;
 
     return 0;
 }
