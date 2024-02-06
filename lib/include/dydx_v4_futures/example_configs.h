@@ -29,8 +29,8 @@ inline const ExchangeConfig EXCHANGE_CONFIG_LOCAL_PLAINTEXT_NODE_TESTNET {
     .chain_id = NETWORK_ID_MAINNET,
     .fee_minimum_gas_price = 4630550000000000,
     .fee_denom = "adv4tnt",
-    .node_grpc_gateway_rest_config = common::RestConfig {.host = "dydx-ops-rpc.kingnodes.com", .port = 443, .use_tls = true},
-    .node_tendermint_rest_config = common::RestConfig {.host = "dydx-testnet-archive.allthatnode.com", .port = 26657, .use_tls = false},
+    .node_grpc_gateway_rest_config = common::RestConfig {.host = "dydx-rest.publicnode.com", .port = 443, .use_tls = true},
+    .node_tendermint_rest_config = common::RestConfig {.host = "dydx-grpc.publicnode.com", .port = 443, .use_tls = true},
     .indexer_rest_config = INDEXER_API_HOST_MAINNET,
     .indexer_ws_config = INDEXER_WS_HOST_MAINNET,
 };

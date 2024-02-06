@@ -11,7 +11,6 @@
 #include <boost/beast/http.hpp>
 #include <boost/beast/ssl.hpp>
 #include <boost/beast/version.hpp>
-#include <iostream>
 
 namespace common {
 
@@ -131,7 +130,6 @@ nlohmann::json RestClient::Get(std::string path, std::string body)
     if (response.empty()) {
         return nullptr;
     }
-    std::cout << response << std::endl;
     return nlohmann::json::parse(response);
 }
 

@@ -20,7 +20,8 @@ int main()
 
     dydx_v4_client_lib::CompositeClient client(exchange_config);
 
-    std::cout << client.indexer_rest_client->GetSubaccount(account_info.GetSubaccount()) << std::endl;
+    std::cout << "subaccount:" << std::endl
+	      << client.indexer_rest_client->GetSubaccount(account_info.GetSubaccount()) << std::endl;
     std::cout << client.PlaceOrder(
                      exchange_info,
                      account_info,
